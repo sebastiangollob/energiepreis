@@ -23,7 +23,7 @@ client = genai.Client()
 def fetch_and_parse_price():
     """
     Fetches the HTML from the provider's URL and uses the Gemini API
-    to parse the electricity price and the month it is valid for.
+    to parse the electricity price and the month it is valid from.
     """
     try:
         # Fetch the HTML content from the provider's website
@@ -58,7 +58,7 @@ def fetch_and_parse_price():
         valid_from = data["valid_from"]
         last_updated = datetime.now().isoformat()
 
-        return {"price": price, "last_update": last_updated, "valid-from": valid_from}
+        return {"price": price, "last_update": last_updated, "valid_from": valid_from}
 
     except Exception as e:
         print(f"An error occurred: {e}")
