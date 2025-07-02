@@ -3,6 +3,9 @@ name: Update and Deploy Price Data
 on:
   schedule:
     - cron: "0 0 * * *" # Runs every day at midnight UTC
+  push:
+    branches:
+      - main
   workflow_dispatch: # Allows manual triggering
 
 jobs:
@@ -22,6 +25,7 @@ jobs:
 
       - name: Generate price data
         env:
+          ENERGY_PROVIDER_URL: ${{ secrets.ENERGY_PROVIDER_URL }}
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
         run: python deploy.py
 
