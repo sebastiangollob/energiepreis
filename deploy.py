@@ -33,7 +33,7 @@ def fetch_and_parse_price():
 
         # Use the Gemini API to parse the HTML
         prompt = f"""
-        You are an expert at parsing messy HTML. Your task is to find the electricity price in cents per kWh and the start validity period from the following HTML content.
+        You are an expert at parsing messy HTML. Your task is to find the electricity price in €/kWh and the start validity period from the following HTML content.
 
         HTML_CONTENT:
         ---
