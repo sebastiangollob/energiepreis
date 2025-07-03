@@ -10,7 +10,6 @@ from pydantic import BaseModel
 
 class EnergyPriceInfo(BaseModel):
     price: float
-    last_update: datetime
     valid_from: datetime
 
 
