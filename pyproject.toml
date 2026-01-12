@@ -1,0 +1,11 @@
+[project]
+name = "energiepreis"
+version = "0.1.0"
+description = "A package to fetch and provide energy prices."
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "google-genai>=1.57.0",
+    "pydantic>=2.12.5",
+    "requests>=2.32.5",
+]
